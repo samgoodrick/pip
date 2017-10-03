@@ -30,7 +30,8 @@ namespace pip
     symbol* get_symbol(const char* str);
     symbol* get_symbol(const std::string& str);
 
-    // TOOD: Add factories for creating terms, e.g., make_program.
+    // TODO: Add factories for creating terms, e.g., make_program.
+		expr* make_int_expr(type* t, int val);
 
   private:
     /// The diagnostic manager.

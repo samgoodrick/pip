@@ -20,4 +20,9 @@ namespace pip
     return syms.get(str);
   }
 
+	expr* make_int_expr(type* t, int val)
+	{
+		return new int_expr(t, val);
+	}
+
 } // namesapce pip
