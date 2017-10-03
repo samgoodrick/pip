@@ -1,6 +1,7 @@
 #pragma once
 
 #include <pip/syntax.hpp>
+#include <pip/expr.hpp>
 
 #include <cc/diagnostics.hpp>
 #include <cc/factory.hpp>
@@ -31,6 +32,11 @@ namespace pip
     symbol* get_symbol(const std::string& str);
 
     // TODO: Add factories for creating terms, e.g., make_program.
+		expr* make_range_expr(type* t, int l, int h);
+		expr* make_wild_expr(type* t, int n, int m);
+		expr* make_miss_expr(type* t);
+		expr* make_ref_expr(type* t, symbol* id);
+		expr* make_field_expr(type* t, expr_kind k);
 		expr* make_int_expr(type* t, int val);
 
   private:
