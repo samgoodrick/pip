@@ -12,6 +12,8 @@ namespace pip
 	{		
 	public:
 		translator( context& cxt );
+
+		operator()(const sexpr::expr* e);
 		
 		expr* translate_expr(const sexpr::expr* e);
 		expr* translate_int_expr(const sexpr::int_expr* e);
