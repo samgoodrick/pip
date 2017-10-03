@@ -16,6 +16,11 @@ namespace pip
 		operator()(const sexpr::expr* e);
 		
 		expr* translate_expr(const sexpr::expr* e);
+		expr* translate_range_expr(const sexpr::expr* e);
+		expr* translate_wild_expr(const sexpr::expr* e);
+		expr* translate_miss_expr(const sexpr::expr* e);
+		expr* translate_ref_expr(const sexpr::expr* e);
+		expr* translate_field_expr(const sexpr::expr* e);
 		expr* translate_int_expr(const sexpr::int_expr* e);
 	private:
 		context& cxt;
